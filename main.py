@@ -25,7 +25,7 @@ parser.add_argument(
 )
 parser.add_argument(
     'activation',
-    choices=['threshold', 'tanh', 'relu'],
+    choices=['threshold', 'tanh', 'test', 'relu'],
     help='Input activation function: `threshold`, `tanh`, or `relu`'
 )
 parser.add_argument(

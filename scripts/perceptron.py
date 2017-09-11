@@ -52,15 +52,15 @@ def nonlin(x, deriv=False):
     return (1/( 1 + np.exp(-x) ) )
 
 def perceptron_fnc(weights, theta, error, x):
-    x = np.array([x])
-    for e in error:
-        if e > 0:
-            weights -= x.T
-            #theta += 1
-        elif e < 0:
-            weights += x.T
-            #theta -= 1
-        return weights, theta
+    x = np.array([x])  # fsr, need to declare this as a numpy arr...again
+    if error > 0:
+        weights -= x.T
+        theta += 1
+    elif error <0:
+        weights += x.T
+        theta -= 1
+
+    return weights, theta
 
 
 def winnow_fnc(weights, theta, error):
